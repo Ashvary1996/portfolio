@@ -23,3 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 .env
+.gitignore
+dummy.jsx
+dummy.html

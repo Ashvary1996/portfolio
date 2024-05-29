@@ -2,7 +2,10 @@ export const majorProjects = [
   {
     title: 'Red Bus',
     duration: '23 March - 26 April 2024',
-    link: '#',
+    image: "https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg",
+    liveLink: 'https://ecom-app-by-ashvary.netlify.app/ ',
+    gitHubLink: " https://github.com/Ashvary1996/e-com-app",
+    techStackUsed: ["html", "css", "js", "react", "mongodb", "tailwind", "node", "express", "restfulApi", "gitHub", "netlify", "render", "postman", "mongoDbAtlas"],
     description: `Employed an agile approach, dividing the frontend project into two 4-week sprints for design, analysis, and development.
       Engineered a comprehensive bus ticketing solution enabling users to effortlessly search, book, and manage their bus tickets.
       Leveraged ReactJS and Tailwind CSS for frontend development, alongside React-Redux for streamlined state management.
