@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaEnvelope,
-  FaPhone,
-  FaMapMarkerAlt,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
@@ -15,6 +9,7 @@ const Contact = () => {
     subject: "",
     message: "",
   });
+  const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
     setFormData({
@@ -35,10 +30,18 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          console.log("Email sent successfully:", result.text);
+          setStatus("Email sent successfully!");
+          setFormData({
+            name: "",
+            email: "",
+            subject: "",
+            message: "",
+          });
         },
         (error) => {
-          console.log(error.text);
+          console.log("Failed to send email:", error.text);
+          setStatus("Failed to send email. Please try again later.");
         }
       );
   };
@@ -108,7 +111,7 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-300 "
+                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-300"
                   required
                 />
               </div>
@@ -119,18 +122,18 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-300 "
+                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-300"
                   required
                 />
               </div>
               <div>
                 <label className="block mb-2 text-gray-300">Subject</label>
                 <input
-                  type="subject"
+                  type="text"
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-300 "
+                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-300"
                   required
                 />
               </div>
@@ -140,7 +143,7 @@ const Contact = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 "
+                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-300"
                   required
                 ></textarea>
               </div>
@@ -153,6 +156,7 @@ const Contact = () => {
                 </button>
               </div>
             </form>
+            {status && <p className="mt-4 text-center">{status}</p>}
           </div>
         </div>
       </div>
