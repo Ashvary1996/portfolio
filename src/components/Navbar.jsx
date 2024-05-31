@@ -4,7 +4,7 @@ const resumeUrl = require("../data/resume.pdf");
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 w-full bg-white shadow-md z-10 ">
+    <nav className="fixed top-0 w-full bg-gray-800 text-white shadow-md z-10">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <Link
           to="home"
@@ -19,7 +19,7 @@ const Navbar = () => {
             to="home"
             smooth={true}
             duration={1000}
-            className="cursor-pointer"
+            className="cursor-pointer hover:text-gray-300"
           >
             Home
           </Link>
@@ -27,15 +27,15 @@ const Navbar = () => {
             to="projects"
             smooth={true}
             duration={1000}
-            className="cursor-pointer"
+            className="cursor-pointer hover:text-gray-300"
           >
             Projects
-          </Link> 
+          </Link>
           <Link
             to="contact"
             smooth={true}
             duration={1000}
-            className="cursor-pointer"
+            className="cursor-pointer hover:text-gray-300"
           >
             Contact
           </Link>
@@ -50,6 +50,7 @@ const Navbar = () => {
                 e.preventDefault();
               }
             }}
+            className="hover:text-gray-300"
           >
             Resume
           </a>
