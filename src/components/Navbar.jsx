@@ -19,9 +19,7 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <p
           className={`text-xl font-bold cursor-pointer `}
-          style={{ color: rColor, ":hover": { color: "gray" } }}
-          smooth={true}
-          duration={1000}
+          style={{ color: rColor }}
           onClick={() => setRcolor(getRandomColor())}
         >
           Ashvary Gidian
@@ -29,7 +27,6 @@ const Navbar = () => {
         <div className="space-x-4">
           <Link
             to="home"
-            smooth={true}
             duration={1000}
             className="cursor-pointer hover:text-gray-300 hover:font-semibold"
             style={{ color: rColor }}
@@ -38,16 +35,14 @@ const Navbar = () => {
           </Link>
           <Link
             to="projects"
-            smooth={true}
             duration={1000}
-            className="cursor-pointer hover:font-semibold "
+            className="cursor-pointer hover:font-semibold"
             style={{ color: rColor }}
           >
             Projects
           </Link>
           <Link
             to="contact"
-            smooth={true}
             duration={1000}
             className="cursor-pointer hover:font-semibold"
             style={{ color: rColor }}
