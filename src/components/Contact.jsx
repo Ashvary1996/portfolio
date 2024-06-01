@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
@@ -52,7 +58,14 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="min-h-screen py-20 bg-gray-900 text-white">
+    <section
+      id="contact"
+      className="min-h-screen py-20 bg-gray-900 text-white bg-opacity-10"
+      style={{
+        backgroundImage: `url(${"https://i.gifer.com/4NB4.gif"})`,
+        backgroundSize: "cover",
+      }} 
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center mb-2">Contact Me</h2>
         <p className="text-sm text-center italic p-5">
@@ -61,7 +74,7 @@ const Contact = () => {
           from you.
         </p>
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="md:w-1/3 mb-12 md:mb-0">
+          <div className="md:w-1/3 mb-12 md:mb-0  ">
             <h3 className="text-2xl font-bold mb-4">Get in Touch</h3>
             <p className="mb-4 flex items-center">
               <FaMapMarkerAlt className="mr-2" />
@@ -77,7 +90,7 @@ const Contact = () => {
             </p>
             <div className="flex space-x-4 mt-6">
               <a
-                href="https://github.com/ashvarygidian"
+                href="https://github.com/Ashvary1996"
                 target="_blank"
                 rel="noreferrer"
                 className="text-gray-300 hover:text-gray-500 transition duration-300"
@@ -85,7 +98,7 @@ const Contact = () => {
                 <FaGithub size={30} />
               </a>
               <a
-                href="https://www.linkedin.com/in/ashvarygidian"
+                href="https://www.linkedin.com/in/ashvary-gidian/"
                 target="_blank"
                 rel="noreferrer"
                 className="text-gray-300 hover:text-gray-500 transition duration-300"
@@ -102,7 +115,7 @@ const Contact = () => {
               </a>
             </div>
           </div>
-          <div className="md:w-2/3 bg-gray-800 p-8 shadow-lg rounded-lg ">
+          <div className="md:w-2/3 p-8  bg-gray-700  bg-opacity-30 hover:bg-gray-700 hover:bg-opacity-40   shadow-lg rounded-lg ">
             <form onSubmit={handleSubmit} className="space-y-6 text-black">
               <div>
                 <label className="block mb-2 text-gray-300">Name</label>

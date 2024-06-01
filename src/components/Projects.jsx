@@ -47,7 +47,11 @@ const techIcons = {
 
 const Projects = () => {
   return (
-    <section id="projects" className="min-h-screen py-20 bg-gray-900">
+    <section id="projects" className="min-h-screen py-20 bg-gray-900" 
+    style={{
+      backgroundImage: `url(${"https://i.gifer.com/4NB4.gif"})`,
+      backgroundSize: "cover",
+    }}>
       <div className="container mx-auto px-6">
         <div>
           <h2 className="text-3xl font-bold text-center mb-5 text-white">Projects</h2>
@@ -59,12 +63,12 @@ const Projects = () => {
           {majorProjects.map((project, index) => (
             <div
               key={index}
-              className={`project-card p-6 bg-gray-800 rounded-lg shadow-md transition duration-300 hover:bg-gray-700 flex flex-col lg:flex-row ${
+              className={`project-card p-6 bg-gray-800 bg-opacity-30 rounded-lg shadow-md transition duration-300 hover:bg-gray-800 flex flex-col lg:flex-row ${
                 index % 2 === 0 ? "" : "lg:flex-row-reverse"
               }`}
             >
               <div className="lg:w-3/5">
-                <h3 className="project-title text-2xl font-bold mb-2 hover:text-blue-400 text-white">
+                <h3 className="project-title text-2xl font-bold mb-2 hover:text-red-600 text-white  ">
                   {project.title}
                 </h3>
                 <p className="project-duration text-gray-400 mb-2">
