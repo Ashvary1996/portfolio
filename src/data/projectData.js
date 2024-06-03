@@ -1,4 +1,7 @@
 import redBusHome from "../data/redbusHome.png"
+import flashcardHome from "../data/flashcardHome.png"
+import ecomHome from "../data/ecomHome.png"
+import bookMyShowHome from "../data/bookMyShow.png"
 export const majorProjects = [
   {
     title: 'Red Bus',
@@ -12,7 +15,7 @@ export const majorProjects = [
   {
     title: 'Flashcard Generator',
     duration: '5 Jul - 27 Oct 2023',
-    image: "https://private-user-images.githubusercontent.com/89014041/278467583-c818daaf-6850-42b1-ae86-82bc0cc89ca0.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTcxNTYwNDMsIm5iZiI6MTcxNzE1NTc0MywicGF0aCI6Ii84OTAxNDA0MS8yNzg0Njc1ODMtYzgxOGRhYWYtNjg1MC00MmIxLWFlODYtODJiYzBjYzg5Y2EwLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA1MzElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNTMxVDExNDIyM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWFiYWMxZjE1Y2RjYjEzYWYxZjJmMDQ1ZjhlYWEwYmU3NWM4MzkxYWMzZmZiNWJiNGE4OTc0OGFjZGM0MWQ2MjcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.p2EHrsaWP9TtegQHQjR6sJpde71TavZNp2RpS00ty4s",
+    image: flashcardHome,
     liveLink: 'https://flashcardgenerator4.netlify.app/',
     gitHubLink: "https://github.com/Ashvary1996/flashcardgenerator",
     techStackUsed: ["html", "css", "js", "react", "bootstrap", "gitHub", "netlify"],
@@ -21,7 +24,7 @@ export const majorProjects = [
   {
     title: 'E-Com-App',
     duration: '26 Feb - 28 May 2024',
-    image: "https://github.com/Ashvary1996/e-com-app/blob/main/ss.images/screenshots%20(5).png?raw=true",
+    image: ecomHome,
     liveLink: 'https://ecom-app-by-ashvary.netlify.app/',
     gitHubLink: "https://github.com/Ashvary1996/e-com-app",
     techStackUsed: ["html", "css", "js", "react", "mongodb", "tailwind", "node", "express", "restfulApi", "gitHub", "netlify", "render", "postman", "mongoDbAtlas", "razorpay"],
@@ -30,7 +33,7 @@ export const majorProjects = [
   {
     title: 'BookmyShow',
     duration: '26 Feb - 28 May 2024',
-    image: "https://github.com/Ashvary1996/bookmyshow/blob/main/screenshots/1.png?raw=true",
+    image: bookMyShowHome,
     liveLink: 'https://bookmyshow-3.netlify.app/',
     gitHubLink: "https://github.com/Ashvary1996/bookmyshow",
     techStackUsed: ["html", "css", "js", "react", "mongodb", "bootstrap", "node", "express", "restfulApi", "gitHub", "netlify", "render", "postman", "mongoDbAtlas", "axios"],
