@@ -1,54 +1,136 @@
-import redBusHome from "../data/redbusHome.png"
-import flashcardHome from "../data/flashcardHome.png"
-import ecomHome from "../data/ecomHome.png"
-import bookMyShowHome from "../data/bookMyShow.png"
+import redBusHome from "../data/redbusHome.png";
+import flashcardHome from "../data/flashcardHome.png";
+import ecomHome from "../data/ecomHome.png";
+import bookMyShowHome from "../data/bookMyShow.png";
+import todoImg from "../data/todoImg.png";
+import movieImg from "../data/movieImg.png";
+import weatherImg from "../data/weatherImg.png";
 export const majorProjects = [
   {
-    title: 'Red Bus',
-    duration: '23 March - 26 April 2024',
+    title: "Red Bus",
+    duration: "23 March - 26 April 2024",
     image: redBusHome,
-    liveLink: 'https://red-bus-by-ashvary.netlify.app/',
+    liveLink: "https://red-bus-by-ashvary.netlify.app/",
     gitHubLink: "https://github.com/Ashvary1996/RedBus",
-    techStackUsed: ["html", "css", "js", "react", "mongodb", "tailwind", "node", "express", "restfulApi", "gitHub", "netlify", "render", "postman", "mongoDbAtlas,stripe"],
-    description: `The Red Bus app is a comprehensive bus ticketing solution designed to simplify the process of searching, booking, and managing bus tickets for users. Developed using an agile approach, the project was divided into two 4-week sprints that covered the design, analysis, and development phases. For the frontend, ReactJS and Tailwind CSS were utilized to create a responsive and modern user interface, while React-Redux was employed for efficient state management to ensure a seamless user experience. The backend was built using NodeJS and MongoDB, providing a robust and scalable infrastructure, and integrated with Stripe for secure payment processing. Additionally, the implementation of robust input field validation and extensive testing resulted in a notable 30% reduction in project time complexity, thereby enhancing overall efficiency.`
+    techStackUsed: [
+      "html",
+      "css",
+      "js",
+      "react",
+      "mongodb",
+      "tailwind",
+      "node",
+      "express",
+      "restfulApi",
+      "gitHub",
+      "netlify",
+      "render",
+      "postman",
+      "mongoDbAtlas,stripe",
+    ],
+    description: `The Red Bus app is a comprehensive bus ticketing solution designed to simplify the process of searching, booking, and managing bus tickets for users. Developed using an agile approach, the project was divided into two 4-week sprints that covered the design, analysis, and development phases. For the frontend, ReactJS and Tailwind CSS were utilized to create a responsive and modern user interface, while React-Redux was employed for efficient state management to ensure a seamless user experience. The backend was built using NodeJS and MongoDB, providing a robust and scalable infrastructure, and integrated with Stripe for secure payment processing. Additionally, the implementation of robust input field validation and extensive testing resulted in a notable 30% reduction in project time complexity, thereby enhancing overall efficiency.`,
   },
   {
-    title: 'Flashcard Generator',
-    duration: '5 Jul - 27 Oct 2023',
+    title: "Flashcard Generator",
+    duration: "5 Jul - 27 Oct 2023",
     image: flashcardHome,
-    liveLink: 'https://flashcardgenerator4.netlify.app/',
+    liveLink: "https://flashcardgenerator4.netlify.app/",
     gitHubLink: "https://github.com/Ashvary1996/flashcardgenerator",
-    techStackUsed: ["html", "css", "js", "react", "bootstrap", "gitHub", "netlify"],
-    description: `The project addressed the need for a user-friendly application to simplify the creation and management of flashcards efficiently. It was developed using HTML, CSS, JavaScript, React, Tailwind CSS, Redux Toolkit, Formik, jspdf, yup, and react-router-dom to ensure robust functionality. The application facilitates intuitive creation and access to flashcards, supporting features such as text and image card creation, sharing options, download capabilities, deletion functionality, and print support for enhanced usability. Agile methodology was employed to enhance project efficiency, with React, React-Redux, and localStorage used for data management, React-router for routing, and Tailwind CSS for responsive component development. Efficiency was further improved by validating input fields with Formik.js and conducting rigorous testing, resulting in a 20% reduction in project time complexity.`
+    techStackUsed: [
+      "html",
+      "css",
+      "js",
+      "react",
+      "bootstrap",
+      "gitHub",
+      "netlify",
+    ],
+    description: `The project addressed the need for a user-friendly application to simplify the creation and management of flashcards efficiently. It was developed using HTML, CSS, JavaScript, React, Tailwind CSS, Redux Toolkit, Formik, jspdf, yup, and react-router-dom to ensure robust functionality. The application facilitates intuitive creation and access to flashcards, supporting features such as text and image card creation, sharing options, download capabilities, deletion functionality, and print support for enhanced usability. Agile methodology was employed to enhance project efficiency, with React, React-Redux, and localStorage used for data management, React-router for routing, and Tailwind CSS for responsive component development. Efficiency was further improved by validating input fields with Formik.js and conducting rigorous testing, resulting in a 20% reduction in project time complexity.`,
   },
   {
-    title: 'E-Com-App',
-    duration: '26 Feb - 28 May 2024',
+    title: "E-Com-App",
+    duration: "26 Feb - 28 May 2024",
     image: ecomHome,
-    liveLink: 'https://ecom-app-by-ashvary.netlify.app/',
+    liveLink: "https://ecom-app-by-ashvary.netlify.app/",
     gitHubLink: "https://github.com/Ashvary1996/e-com-app",
-    techStackUsed: ["html", "css", "js", "react", "mongodb", "tailwind", "node", "express", "restfulApi", "gitHub", "netlify", "render", "postman", "mongoDbAtlas", "razorpay"],
-    description: `The project addressed the demand for a user-friendly e-commerce application by streamlining the browsing, purchasing, and management of products to enhance the shopping experience. Developed using HTML, CSS, JavaScript, React, Tailwind CSS, Redux Toolkit, Nodemailer, React-Router, Formik, and Yup, the platform offers a comprehensive solution for customers. It features easy navigation, secure transactions, and efficient product management, with advanced functionalities such as product search, cart management, order placement, and a seamless checkout process to ensure user satisfaction. Additionally, a responsive user interface was crafted to ensure optimal performance and visual appeal across various devices, prioritizing accessibility and ease of use for all customers.`
+    techStackUsed: [
+      "html",
+      "css",
+      "js",
+      "react",
+      "mongodb",
+      "tailwind",
+      "node",
+      "express",
+      "restfulApi",
+      "gitHub",
+      "netlify",
+      "render",
+      "postman",
+      "mongoDbAtlas",
+      "razorpay",
+    ],
+    description: `The project addressed the demand for a user-friendly e-commerce application by streamlining the browsing, purchasing, and management of products to enhance the shopping experience. Developed using HTML, CSS, JavaScript, React, Tailwind CSS, Redux Toolkit, Nodemailer, React-Router, Formik, and Yup, the platform offers a comprehensive solution for customers. It features easy navigation, secure transactions, and efficient product management, with advanced functionalities such as product search, cart management, order placement, and a seamless checkout process to ensure user satisfaction. Additionally, a responsive user interface was crafted to ensure optimal performance and visual appeal across various devices, prioritizing accessibility and ease of use for all customers.`,
   },
   {
-    title: 'BookmyShow',
-    duration: '26 Feb - 28 May 2024',
+    title: "BookmyShow",
+    duration: "26 Feb - 28 May 2024",
     image: bookMyShowHome,
-    liveLink: 'https://bookmyshow-3.netlify.app/',
+    liveLink: "https://bookmyshow-3.netlify.app/",
     gitHubLink: "https://github.com/Ashvary1996/bookmyshow",
-    techStackUsed: ["html", "css", "js", "react", "mongodb", "bootstrap", "node", "express", "restfulApi", "gitHub", "netlify", "render", "postman", "mongoDbAtlas", "axios"],
-    description: `BookMyShow is a web application that allows users to book movie tickets. This Appliction have user friendly interface so users can select the available movie ,time slot and seats which is given on display. Our Project uses both local Storage and MongoDB for storing the selected data temporarly and permanently in database.`
-  }
+    techStackUsed: [
+      "html",
+      "css",
+      "js",
+      "react",
+      "mongodb",
+      "bootstrap",
+      "node",
+      "express",
+      "restfulApi",
+      "gitHub",
+      "netlify",
+      "render",
+      "postman",
+      "mongoDbAtlas",
+      "axios",
+    ],
+    description: `BookMyShow is a web application that allows users to book movie tickets. This Appliction have user friendly interface so users can select the available movie ,time slot and seats which is given on display. Our Project uses both local Storage and MongoDB for storing the selected data temporarly and permanently in database.`,
+  },
 ];
 
 export const miniProjects = [
   {
-    title: 'E-Com-App',
-    duration: '26 Feb - Currently Working',
-    image: "https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg",
-    liveLink: 'https://ecom-app-by-ashvary.netlify.app/ ',
-    gitHubLink: " https://github.com/Ashvary1996/e-com-app",
-    techStackUsed: ["html", "css", "js", "react", "mongodb", "tailwind", "node", "express", "restfulApi", "gitHub", "netlify", "render", "postman", "mongoDbAtlas"],
-    description: `The project addressed the demand for a user-friendly e-commerce application by streamlining the browsing, purchasing, and management of products to enhance the shopping experience. Developed using HTML, CSS, JavaScript, React, Tailwind CSS, Redux Toolkit, Nodemailer, React-Router, Formik, and Yup, the platform offers a comprehensive solution for customers. It features easy navigation, secure transactions, and efficient product management, with advanced functionalities such as product search, cart management, order placement, and a seamless checkout process to ensure user satisfaction. Additionally, a responsive user interface was crafted to ensure optimal performance and visual appeal across various devices, prioritizing accessibility and ease of use for all customers.`
-  }
+    title: "Todo-App",
+    image: todoImg,
+    liveLink: "https://mytodoapp-v2.netlify.app/",
+    gitHubLink: "https://github.com/Ashvary1996/todo_app",
+    techStackUsed: ["html", "css", "js", "react", "gitHub", "netlify", "redux"],
+    description: `"Never forget a task again! This web app lets you create and manage your to-dos, and even saves them when you close your browser."`,
+  },
+  {
+    title: "Movie-Finder",
+    image: movieImg,
+    liveLink: "https://movies-finder-app-v2.netlify.app/",
+    gitHubLink: "https://github.com/Ashvary1996/movie_finder",
+    techStackUsed: ["html", "css", "js", "react", "gitHub", "netlify", "axios"],
+    description: `"Can't decide what to watch? Search for movies and explore options with this handy web app."`,
+  },
+  {
+    title: "Weather-App",
+    image: weatherImg,
+    liveLink: "https://weather-app-ashvary.netlify.app/",
+    gitHubLink: "https://github.com/Ashvary1996/weather_app",
+    techStackUsed: [
+      "html",
+      "css",
+      "js",
+      "react",
+      "gitHub",
+      "netlify",
+      "react-spinners",
+      "axios",
+    ],
+    description: `"This weather app lets you search for the current conditions and 3-day forecast for any location. Plan your outfits, pack for your trip, or simply check on friends and family – all with a few clicks."`,
+  },
 ];

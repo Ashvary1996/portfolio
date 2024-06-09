@@ -28,6 +28,7 @@ const Navbar = () => {
           <Link
             to="home"
             duration={1000}
+            smooth={true}
             className="cursor-pointer hover:text-gray-300 hover:font-semibold"
             style={{ color: rColor }}
           >
@@ -36,6 +37,7 @@ const Navbar = () => {
           <Link
             to="projects"
             duration={1000}
+            smooth={true}
             className="cursor-pointer hover:font-semibold"
             style={{ color: rColor }}
           >
@@ -44,6 +46,7 @@ const Navbar = () => {
           <Link
             to="contact"
             duration={1000}
+            smooth={true}
             className="cursor-pointer hover:font-semibold"
             style={{ color: rColor }}
           >
