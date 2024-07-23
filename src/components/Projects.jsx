@@ -25,24 +25,26 @@ import {
 import restApiIcon from "../data/restApi.png";
 
 const techIcons = {
-  html: <FaHtml5 size={30} className="text-orange-400" />,
-  css: <FaCss3 size={30} className="text-blue-400" />,
-  js: <FaJsSquare size={30} className="text-yellow-400" />,
-  react: <FaReact size={30} className="text-cyan-400" />,
-  node: <FaNodeJs size={30} className="text-green-400" />,
-  express: <SiExpress size={30} className="text-gray-400" />,
-  mongodb: <SiMongodb size={30} className="text-green-400" />,
-  mongodbAtlas: <FaDatabase size={30} className="text-green-400" />,
-  tailwind: <SiTailwindcss size={30} className="text-teal-400" />,
-  restfulApi: <img src={restApiIcon} alt="REST API" className="w-5 h-5" />,
-  gitHub: <FaGithub size={30} className="text-gray-400" />,
-  netlify: <SiNetlify size={30} className="text-green-400" />,
-  render: <SiRender size={30} className="text-purple-400" />,
-  postman: <SiPostman size={30} className="text-orange-400" />,
-  mongoDbAtlas: <FaCloud size={30} className="text-green-400" />,
-  bootstrap: <FaBootstrap size={30} className="text-purple-400" />,
-  razorpay: <SiRazorpay size={30} className="text-blue-400" />,
-  axios: <SiAxios size={30} className="text-blue-400" />,
+  html: <FaHtml5 className="text-orange-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />,
+  css: <FaCss3 className="text-blue-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />,
+  js: <FaJsSquare className="text-yellow-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />,
+  react: <FaReact className="text-cyan-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />,
+  node: <FaNodeJs className="text-green-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />,
+  express: <SiExpress className="text-gray-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />,
+  mongodb: <SiMongodb className="text-green-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />,
+  mongodbAtlas: <FaDatabase className="text-green-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />,
+  tailwind: <SiTailwindcss className="text-teal-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />,
+  restfulApi: (
+    <img src={restApiIcon} alt="REST API" className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
+  ),
+  gitHub: <FaGithub className="text-gray-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />,
+  netlify: <SiNetlify className="text-green-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />,
+  render: <SiRender className="text-purple-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />,
+  postman: <SiPostman className="text-orange-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />,
+  mongoDbAtlas: <FaCloud className="text-green-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />,
+  bootstrap: <FaBootstrap className="text-purple-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />,
+  razorpay: <SiRazorpay className="text-blue-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />,
+  axios: <SiAxios className="text-blue-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />,
 };
 
 const Projects = () => {
@@ -95,18 +97,23 @@ const Projects = () => {
                     alt={project.title}
                     className="w-full h-full object-cover transition duration-300 ease-in-out hover:opacity-75"
                   />
-                  <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-white bg-gray-900 bg-opacity-75 opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 p-4">
-                    <h4 className="text-xl lg:text-2xl font-bold mb-2 text-center">
-                      {project.title}
-                    </h4>
-                    <div className="flex justify-center gap-4 mt-4 lg:mt-6 mb-4 lg:mb-6">
+                  <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center text-white bg-gray-900 bg-opacity-75 opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 p-4">
+                    {/* Top */}
+                    <div className="mt-auto mb-auto">
+                      <h4 className="text-xl lg:text-2xl font-bold mb-2 text-center">
+                        {project.title}
+                      </h4>
+                    </div>
+
+                    {/* Middle */}
+                    <div className="flex justify-center gap-4 my-auto">
                       <a
                         href={project.liveLink}
                         target="_blank"
                         rel="noreferrer"
                         className="hover:text-sky-400"
                       >
-                        <FaEye size={30} className="lg:size-50" />
+                        <FaEye size={24} className="lg:size-30" />
                       </a>
                       <a
                         href={project.gitHubLink}
@@ -114,17 +121,23 @@ const Projects = () => {
                         rel="noreferrer"
                         className="hover:text-green-400"
                       >
-                        <FaGithub size={30} className="lg:size-50" />
+                        <FaGithub size={24} className="lg:size-30" />
                       </a>
                     </div>
-                    <div className="flex flex-wrap justify-center gap-2">
+
+                    {/* Bottom */}
+                    <div className="flex flex-wrap justify-center gap-2 mt-auto">
                       {project.techStackUsed &&
                         project.techStackUsed.map((tech) => (
                           <div
                             key={tech}
                             className="flex items-center group relative"
                           >
-                            {techIcons[tech] && techIcons[tech]}
+                            {techIcons[tech] && (
+                              <div className="text-base lg:text-lg p-1">
+                                {techIcons[tech]}
+                              </div>
+                            )}
                             <span className="absolute bottom-full mb-1 hidden group-hover:block text-xs bg-black text-white py-1 px-2 rounded">
                               {tech}
                             </span>
@@ -148,11 +161,11 @@ const Projects = () => {
                 key={index}
                 className="relative flex flex-col w-full sm:w-1/2 md:w-2/5 lg:w-1/4 m-4 overflow-hidden rounded-lg bg-gray-800 bg-opacity-30 shadow-md transition duration-300 hover:bg-gray-800"
               >
-                <h4 className="text-xl lg:text-2xl font-bold mb-2 text-center">
+                <h4 className="text-white text-lg lg:text-2xl font-semibold mb-2 text-center">
                   {project.title}
                 </h4>
                 <img
-                  className="w-full h-48 object-cover transition duration-300 ease-in-out hover:opacity-75"
+                  className="text-red w-full h-48 object-cover transition duration-300 ease-in-out hover:opacity-75"
                   src={project.image}
                   alt={project.title}
                 />
