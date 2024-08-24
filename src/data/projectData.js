@@ -1,15 +1,15 @@
-import redBusHome from "../data/redbusHome.png";
-import flashcardHome from "../data/flashcardHome.png";
-import ecomHome from "../data/ecomHome.png";
-import bookMyShowHome from "../data/bookMyShow.png";
-import todoImg from "../data/todoImg.png";
-import movieImg from "../data/movieImg.png";
-import weatherImg from "../data/weatherImg.png";
+import redbusHome from "../data/thumbnail/redbusHome.png";
+import flashcardHome from "../data/thumbnail/flashcardHome.png";
+import ecomHome from "../data/thumbnail/ecomHome.png";
+import bookMyShowHome from "../data/thumbnail/bookMyShow.png";
+import todoImg from "../data/thumbnail/todoImg.png";
+import movieImg from "../data/thumbnail/movieImg.png";
+import weatherImg from "../data/thumbnail/weatherImg.png";
 export const majorProjects = [
   {
     title: "Red Bus",
     duration: "23 March - 26 April 2024",
-    image: redBusHome,
+    image: redbusHome,
     liveLink: "https://red-bus-by-ashvary.netlify.app/",
     gitHubLink: "https://github.com/Ashvary1996/RedBus",
     techStackUsed: [

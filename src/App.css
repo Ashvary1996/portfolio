@@ -1,17 +1,5 @@
 .App {
   text-align: center;
-   
-}
- 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -29,11 +17,33 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-shadow {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.tech-stack-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.tech-stack-scroll::-webkit-scrollbar-thumb {
+  background-color: teal;
+  border-radius: 6px;
+}
+
+.tech-stack-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tech-stack-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: teal transparent;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+img.object-contain {
+  object-fit: contain;
 }

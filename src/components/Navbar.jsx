@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
+import { FaBars, FaTimes } from "react-icons/fa";
 const resumeUrl = require("../data/resume.pdf");
 
 const Navbar = () => {
   const [rColor, setRcolor] = useState(getRandomColor());
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   function getRandomColor() {
     const letters = "0123456789ABCDEF";
@@ -15,62 +17,99 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="fixed top-0 w-full bg-gray-800 text-white shadow-md z-10">
+    <nav className="fixed top-0 w-full bg-gray-800 text-white shadow-md z-10 opacity-90">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <p
-          className={`text-xl font-bold cursor-pointer `}
-          style={{ color: rColor }}
+          className="text-xl font-bold cursor-pointer"
+          style={{ color: rColor, fontFamily: "Poppins, sans-serif" }}
           onClick={() => setRcolor(getRandomColor())}
         >
           Ashvary Gidian
         </p>
-        <div className="space-x-4">
-          <Link
-            to="home"
-            duration={1000}
-            smooth={true}
-            className="cursor-pointer hover:text-gray-300 hover:font-semibold"
-            style={{ color: rColor }}
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex space-x-6">
+          <NavLinks rColor={rColor} resumeUrl={resumeUrl} />
+        </div>
+
+        {/* Mobile Menu Toggle Button */}
+        <div className="md:hidden">
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="text-2xl focus:outline-none"
           >
-            Home
-          </Link>
-          <Link
-            to="projects"
-            duration={1000}
-            smooth={true}
-            className="cursor-pointer hover:font-semibold"
-            style={{ color: rColor }}
-          >
-            Projects
-          </Link>
-          <Link
-            to="contact"
-            duration={1000}
-            smooth={true}
-            className="cursor-pointer hover:font-semibold"
-            style={{ color: rColor }}
-          >
-            Contact
-          </Link>
-          <a
-            href={resumeUrl}
-            download="AshvaryGidian_Resume.pdf"
-            onClick={(e) => {
-              const confirmDownload = window.confirm(
-                "Do you want to download the resume?"
-              );
-              if (!confirmDownload) {
-                e.preventDefault();
-              }
-            }}
-            className="cursor-pointer hover:font-semibold"
-            style={{ color: rColor }}
-          >
-            Resume
-          </a>
+            {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+          </button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-gray-800 py-4 transition-transform transform translate-y-0">
+          <div className="space-y-4 px-6">
+            <NavLinks
+              rColor={rColor}
+              resumeUrl={resumeUrl}
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+          </div>
+        </div>
+      )}
     </nav>
+  );
+};
+
+const NavLinks = ({ rColor, resumeUrl, onClick }) => {
+  return (
+    <>
+      <Link
+        to="home"
+        duration={1000}
+        smooth={true}
+        className="block text-lg cursor-pointer hover:text-gray-300 hover:scale-95 transition-transform duration-300"
+        style={{ color: rColor, fontFamily: "Poppins, sans-serif" }}
+        onClick={onClick}
+      >
+        Home
+      </Link>
+      <Link
+        to="projects"
+        duration={1000}
+        smooth={true}
+        className="block text-lg cursor-pointer hover:text-gray-300 hover:scale-95 transition-transform duration-300"
+        style={{ color: rColor, fontFamily: "Poppins, sans-serif" }}
+        onClick={onClick}
+      >
+        Projects
+      </Link>
+      <Link
+        to="contact"
+        duration={1000}
+        smooth={true}
+        className="block text-lg cursor-pointer hover:text-gray-300 hover:scale-95 transition-transform duration-300"
+        style={{ color: rColor, fontFamily: "Poppins, sans-serif" }}
+        onClick={onClick}
+      >
+        Contact
+      </Link>
+      <a
+        href={resumeUrl}
+        download="AshvaryGidian_Resume.pdf"
+        className="block text-lg cursor-pointer hover:text-gray-300 hover:scale-95 transition-transform duration-300"
+        onClick={(e) => {
+          const confirmDownload = window.confirm(
+            "Do you want to download the resume?"
+          );
+          if (!confirmDownload) {
+            e.preventDefault();
+          }
+          if (onClick) onClick();
+        }}
+        style={{ color: rColor, fontFamily: "Poppins, sans-serif" }}
+      >
+        Resume
+      </a>
+    </>
   );
 };
 

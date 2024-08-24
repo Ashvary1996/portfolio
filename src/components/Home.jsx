@@ -16,7 +16,7 @@ import {
   SiPostman,
   SiExpress,
 } from "react-icons/si";
-import restApiIcon from "../data/restApi.png";
+import restApiIcon from "../data/thumbnail/restApi.png";
 
 const Home = () => {
   const roles = [
@@ -30,7 +30,6 @@ const Home = () => {
     const interval = setInterval(() => {
       setCurrentRole((prevRole) => (prevRole + 1) % roles.length);
     }, 2000);
- 
     return () => clearInterval(interval);
   }, [roles.length]);
 
@@ -42,16 +41,17 @@ const Home = () => {
     <>
       <section
         id="home"
-        className="w-full min-h-screen flex py-20 items-center justify-center  text-white relative"
+        className="w-full min-h-screen flex py-20 items-center justify-center text-white relative"
         style={{
           backgroundImage: `url(${"https://i.gifer.com/4NB4.gif"})`,
           backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
-        <div className="relative text-center max-w-4xl mx-auto p-6 bg-gray-800  bg-opacity-40  shadow-lg rounded-lg transform transition duration-1000 hover:scale-110 hover:bg-gray-800 hover:bg-opacity-60">
-          <h1 className="text-2xl font-bold mb-6 text-gray-200 transform transition duration-1000 hover:scale-110">
+        <div className="relative text-center max-w-4xl mx-auto p-6 bg-gray-800 bg-opacity-60 shadow-lg rounded-lg transform transition duration-1000 hover:scale-105">
+          <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-200">
             Hi, I'm{" "}
-            <span className="font-serif text-3xl">"Ashvary Gidian"</span>,
+            <span className="font-serif text-4xl md:text-5xl">Ashvary Gidian</span>,
             <br />
             <span
               className={`transition-colors duration-500 text-2xl ${roles[currentRole].color}`}
@@ -59,19 +59,19 @@ const Home = () => {
               {roles[currentRole].text}
             </span>
           </h1>
-          <p className="text-xl mb-6 text-gray-400">
+          <p className="text-lg md:text-xl mb-6 text-gray-400">
             I build things for the web
           </p>
-          <h2 className="text-3xl font-semibold mb-6 text-gray-300">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-gray-300">
             About Me
           </h2>
-          <p className="text-justify mb-6 text-gray-400 leading-relaxed">
+          <p className="text-base md:text-lg mb-6 text-gray-400 leading-relaxed">
             I'm a passionate Full Stack Web Developer with a knack for crafting
             user-centric web applications and websites. My coding journey
             ignited in 2021, and since then, I've honed a diverse skillset that
             allows me to bridge the gap between design and development.
           </p>
-          <p className="text-justify mb-6 text-gray-400 leading-relaxed">
+          <p className="text-base md:text-lg mb-6 text-gray-400 leading-relaxed">
             I bring my technical expertise and creative flair to every project,
             aiming to deliver innovative solutions that enhance user engagement
             and overall functionality. My goal is to simplify user journeys by
@@ -86,37 +86,39 @@ const Home = () => {
           ↑
         </button>
       </section>
+
       <section
         className="skillSection skills-section py-20 bg-gray-800"
         style={{
           backgroundImage: `url(${"https://i.gifer.com/4NB4.gif"})`,
           backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-semibold text-gray-200">My Skills</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-200">My Skills</h2>
         </div>
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-6">
-          <div className="skill-item bg-gray-700  bg-opacity-20 p-6 rounded-lg shadow-lg hover:bg-gray-800 transition duration-300 transform hover:scale-105">
-            <h3 className="font-bold text-2xl mb-4 text-gray-200">Frontend</h3>
-            <ul className="skills-list space-y-4 text-gray-300">
-              <li className="flex items-center">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-6">
+          <div className="skill-item bg-gray-700 bg-opacity-20 p-6 rounded-lg shadow-lg hover:bg-gray-800 transition duration-300 transform hover:scale-105">
+            <h3 className="font-bold text-xl md:text-2xl mb-4 text-gray-200">Frontend</h3>
+            <ul className="skills-list space-y-4 text-gray-300  ">
+              <li className="flex items-center text-sm md:text-base">
                 <FaHtml5 className="mr-2 text-orange-400 hover:scale-125 transition-transform" />
                 HTML5
               </li>
-              <li className="flex items-center">
+              <li className="flex items-center text-sm md:text-base">
                 <FaCss3 className="mr-2 text-blue-400 hover:scale-125 transition-transform" />
                 CSS3
               </li>
-              <li className="flex items-center">
+              <li className="flex items-center text-sm md:text-base">
                 <FaJsSquare className="mr-2 text-yellow-400 hover:scale-125 transition-transform" />
                 JavaScript (ES6+)
               </li>
-              <li className="flex items-center">
+              <li className="flex items-center text-sm md:text-base">
                 <FaReact className="mr-2 text-cyan-400 hover:scale-125 transition-transform" />
                 React
               </li>
-              <li className="flex items-center">
+              <li className="flex items-center text-sm md:text-base">
                 <SiTailwindcss className="mr-2 text-teal-400 hover:scale-125 transition-transform" />
                 Tailwind CSS
               </li>
@@ -124,25 +126,25 @@ const Home = () => {
           </div>
 
           <div className="skill-item bg-gray-700 bg-opacity-20 p-6 rounded-lg shadow-lg hover:bg-gray-800 transition duration-300 transform hover:scale-105">
-            <h3 className="font-bold text-2xl mb-4 text-gray-200">Backend</h3>
+            <h3 className="font-bold text-xl md:text-2xl mb-4 text-gray-200">Backend</h3>
             <ul className="skills-list space-y-4 text-gray-300">
-              <li className="flex items-center">
+              <li className="flex items-center text-sm md:text-base">
                 <FaNodeJs className="mr-2 text-green-400 hover:scale-125 transition-transform" />
                 Node.js
               </li>
-              <li className="flex items-center">
+              <li className="flex items-center text-sm md:text-base">
                 <SiExpress className="mr-2 text-gray-400 hover:scale-125 transition-transform" />
                 Express.js
               </li>
-              <li className="flex items-center">
+              <li className="flex items-center text-sm md:text-base">
                 <FaDatabase className="mr-2 text-gray-400 hover:scale-125 transition-transform" />
                 MongoDB
               </li>
-              <li className="flex items-center">
+              <li className="flex items-center text-sm md:text-base">
                 <img
                   src={restApiIcon}
                   alt="REST API"
-                  className="mr-2 hover:scale-125 transition-transform w-6 h-6"
+                  className="mr-2 hover:scale-125 transition-transform w-5 h-5"
                 />
                 RESTful API
               </li>
@@ -150,27 +152,25 @@ const Home = () => {
           </div>
 
           <div className="skill-item bg-gray-700 bg-opacity-20 p-6 rounded-lg shadow-lg hover:bg-gray-800 transition duration-300 transform hover:scale-105">
-            <h3 className="font-bold text-2xl mb-4 text-gray-200">
-              Tools & Platforms
-            </h3>
+            <h3 className="font-bold text-xl md:text-2xl mb-4 text-gray-200">Tools & Platforms</h3>
             <ul className="skills-list space-y-4 text-gray-300">
-              <li className="flex items-center">
+              <li className="flex items-center text-sm md:text-base">
                 <FaGit className="mr-2 text-red-400 hover:scale-125 transition-transform" />
                 Git (Version Control)
               </li>
-              <li className="flex items-center">
+              <li className="flex items-center text-sm md:text-base">
                 <SiNetlify className="mr-2 text-cyan-400 hover:scale-125 transition-transform" />
                 Netlify (Deployment)
               </li>
-              <li className="flex items-center">
+              <li className="flex items-center text-sm md:text-base">
                 <SiRender className="mr-2 text-purple-400 hover:scale-125 transition-transform" />
                 Render (Deployment)
               </li>
-              <li className="flex items-center">
+              <li className="flex items-center text-sm md:text-base">
                 <SiPostman className="mr-2 text-orange-400 hover:scale-125 transition-transform" />
                 Postman
               </li>
-              <li className="flex items-center">
+              <li className="flex items-center text-sm md:text-base">
                 <FaCloud className="mr-2 text-blue-400 hover:scale-125 transition-transform" />
                 MongoDB Atlas
               </li>
