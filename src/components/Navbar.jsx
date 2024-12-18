@@ -5,8 +5,8 @@ const resumeUrl = require("../data/resume.pdf");
 
 const Navbar = () => {
   const [rColor, setRcolor] = useState(getRandomColor());
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   function getRandomColor() {
     const letters = "0123456789ABCDEF";
     let color = "#";
@@ -45,10 +45,13 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-gray-800 py-4 transition-transform transform translate-y-0 ">
+        <div
+          className={`mobile_menu md:hidden bg-gray-800 py-4 transition-transform transform translate-y-0z `}
+        >
           <div className="space-y-4 px-6">
             <NavLinks
               rColor={rColor}
+              isMobileMenuOpen={isMobileMenuOpen}
               resumeUrl={resumeUrl}
               onClick={() => setIsMobileMenuOpen(false)}
             />
@@ -59,14 +62,18 @@ const Navbar = () => {
   );
 };
 
-const NavLinks = ({ rColor, resumeUrl, onClick }) => {
+const NavLinks = ({ rColor, resumeUrl, onClick, isMobileMenuOpen }) => {
   return (
     <>
       <Link
         to="home"
         duration={1000}
         smooth={true}
-        className="block text-lg cursor-pointer hover:text-gray-300 hover:scale-95 transition-transform duration-300 bg-slate-600  hover:bg-slate-700 p-2 bg-opacity-40 rounded-lg"
+        className={`block text-lg cursor-pointer hover:text-gray-300 hover:scale-95 transition-transform duration-300  ${
+          isMobileMenuOpen
+            ? "bg-slate-600  hover:bg-slate-700 p-2 bg-opacity-40 rounded-lg "
+            : null
+        }`}
         style={{ color: rColor, fontFamily: "Poppins, sans-serif" }}
         onClick={onClick}
       >
@@ -76,7 +83,11 @@ const NavLinks = ({ rColor, resumeUrl, onClick }) => {
         to="projects"
         duration={1000}
         smooth={true}
-        className="block text-lg cursor-pointer hover:text-gray-300 hover:scale-95 transition-transform duration-300 bg-slate-600  hover:bg-slate-700 p-2 bg-opacity-40 rounded-lg"
+        className={`block text-lg cursor-pointer hover:text-gray-300 hover:scale-95 transition-transform duration-300  ${
+          isMobileMenuOpen
+            ? "bg-slate-600  hover:bg-slate-700 p-2 bg-opacity-40 rounded-lg "
+            : null
+        }`}
         style={{ color: rColor, fontFamily: "Poppins, sans-serif" }}
         onClick={onClick}
       >
@@ -86,7 +97,11 @@ const NavLinks = ({ rColor, resumeUrl, onClick }) => {
         to="contact"
         duration={1000}
         smooth={true}
-        className="block text-lg cursor-pointer hover:text-gray-300 hover:scale-95 transition-transform duration-300 bg-slate-600  hover:bg-slate-700 p-2 bg-opacity-40 rounded-lg"
+        className={`block text-lg cursor-pointer hover:text-gray-300 hover:scale-95 transition-transform duration-300  ${
+          isMobileMenuOpen
+            ? "bg-slate-600  hover:bg-slate-700 p-2 bg-opacity-40 rounded-lg "
+            : null
+        }`}
         style={{ color: rColor, fontFamily: "Poppins, sans-serif" }}
         onClick={onClick}
       >
@@ -95,7 +110,11 @@ const NavLinks = ({ rColor, resumeUrl, onClick }) => {
       <a
         href={resumeUrl}
         download="AshvaryGidian_Resume.pdf"
-        className="block text-lg cursor-pointer hover:text-gray-300 hover:scale-95 transition-transform duration-300 bg-slate-600  hover:bg-slate-700 p-2 bg-opacity-40 rounded-lg"
+        className={`block text-lg cursor-pointer hover:text-gray-300 hover:scale-95 transition-transform duration-300  ${
+          isMobileMenuOpen
+            ? "bg-slate-600  hover:bg-slate-700 p-2 bg-opacity-40 rounded-lg "
+            : null
+        }`}
         onClick={(e) => {
           const confirmDownload = window.confirm(
             "Do you want to download the resume?"

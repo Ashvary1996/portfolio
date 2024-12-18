@@ -47,3 +47,6 @@ img {
 img.object-contain {
   object-fit: contain;
 }
+/* .mobile_menu{
+  block text-lg cursor-pointer hover:text-gray-300 hover:scale-95 transition-transform duration-300
+} */
