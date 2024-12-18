@@ -45,7 +45,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-gray-800 py-4 transition-transform transform translate-y-0">
+        <div className="md:hidden bg-gray-800 py-4 transition-transform transform translate-y-0 ">
           <div className="space-y-4 px-6">
             <NavLinks
               rColor={rColor}
@@ -66,7 +66,7 @@ const NavLinks = ({ rColor, resumeUrl, onClick }) => {
         to="home"
         duration={1000}
         smooth={true}
-        className="block text-lg cursor-pointer hover:text-gray-300 hover:scale-95 transition-transform duration-300"
+        className="block text-lg cursor-pointer hover:text-gray-300 hover:scale-95 transition-transform duration-300 bg-slate-600  hover:bg-slate-700 p-2 bg-opacity-40 rounded-lg"
         style={{ color: rColor, fontFamily: "Poppins, sans-serif" }}
         onClick={onClick}
       >
@@ -76,7 +76,7 @@ const NavLinks = ({ rColor, resumeUrl, onClick }) => {
         to="projects"
         duration={1000}
         smooth={true}
-        className="block text-lg cursor-pointer hover:text-gray-300 hover:scale-95 transition-transform duration-300"
+        className="block text-lg cursor-pointer hover:text-gray-300 hover:scale-95 transition-transform duration-300 bg-slate-600  hover:bg-slate-700 p-2 bg-opacity-40 rounded-lg"
         style={{ color: rColor, fontFamily: "Poppins, sans-serif" }}
         onClick={onClick}
       >
@@ -86,7 +86,7 @@ const NavLinks = ({ rColor, resumeUrl, onClick }) => {
         to="contact"
         duration={1000}
         smooth={true}
-        className="block text-lg cursor-pointer hover:text-gray-300 hover:scale-95 transition-transform duration-300"
+        className="block text-lg cursor-pointer hover:text-gray-300 hover:scale-95 transition-transform duration-300 bg-slate-600  hover:bg-slate-700 p-2 bg-opacity-40 rounded-lg"
         style={{ color: rColor, fontFamily: "Poppins, sans-serif" }}
         onClick={onClick}
       >
@@ -95,7 +95,7 @@ const NavLinks = ({ rColor, resumeUrl, onClick }) => {
       <a
         href={resumeUrl}
         download="AshvaryGidian_Resume.pdf"
-        className="block text-lg cursor-pointer hover:text-gray-300 hover:scale-95 transition-transform duration-300"
+        className="block text-lg cursor-pointer hover:text-gray-300 hover:scale-95 transition-transform duration-300 bg-slate-600  hover:bg-slate-700 p-2 bg-opacity-40 rounded-lg"
         onClick={(e) => {
           const confirmDownload = window.confirm(
             "Do you want to download the resume?"

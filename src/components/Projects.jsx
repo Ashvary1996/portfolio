@@ -25,64 +25,24 @@ import {
 import restApiIcon from "../data/thumbnail/restApi.png";
 
 const techIcons = {
-  html: (
-    <FaHtml5 className="text-orange-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
-  ),
-  css: (
-    <FaCss3 className="text-blue-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
-  ),
-  js: (
-    <FaJsSquare className="text-yellow-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
-  ),
-  react: (
-    <FaReact className="text-cyan-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
-  ),
-  node: (
-    <FaNodeJs className="text-green-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
-  ),
-  express: (
-    <SiExpress className="text-gray-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
-  ),
-  mongodb: (
-    <SiMongodb className="text-green-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
-  ),
-  mongodbAtlas: (
-    <FaDatabase className="text-green-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
-  ),
-  tailwind: (
-    <SiTailwindcss className="text-teal-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
-  ),
-  restfulApi: (
-    <img
-      src={restApiIcon}
-      alt="REST API"
-      className="w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10"
-    />
-  ),
-  gitHub: (
-    <FaGithub className="text-gray-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
-  ),
-  netlify: (
-    <SiNetlify className="text-green-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
-  ),
-  render: (
-    <SiRender className="text-purple-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
-  ),
-  postman: (
-    <SiPostman className="text-orange-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
-  ),
-  mongoDbAtlas: (
-    <FaCloud className="text-green-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
-  ),
-  bootstrap: (
-    <FaBootstrap className="text-purple-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
-  ),
-  razorpay: (
-    <SiRazorpay className="text-blue-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
-  ),
-  axios: (
-    <SiAxios className="text-blue-400 w-6 h-6 sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
-  ),
+  html: <FaHtml5 className="text-orange-400 " />,
+  css: <FaCss3 className="text-blue-400 " />,
+  js: <FaJsSquare className="text-yellow-400 " />,
+  react: <FaReact className="text-cyan-400 " />,
+  node: <FaNodeJs className="text-green-400 " />,
+  express: <SiExpress className="text-gray-400 " />,
+  mongodb: <SiMongodb className="text-green-400 " />,
+  mongodbAtlas: <FaDatabase className="text-green-400 " />,
+  tailwind: <SiTailwindcss className="text-teal-400 " />,
+  restfulApi: <img src={restApiIcon} alt="REST API" />,
+  gitHub: <FaGithub className="text-gray-400 " />,
+  netlify: <SiNetlify className="text-green-400 " />,
+  render: <SiRender className="text-purple-400 " />,
+  postman: <SiPostman className="text-orange-400 " />,
+  mongoDbAtlas: <FaCloud className="text-green-400 " />,
+  bootstrap: <FaBootstrap className="text-purple-400 " />,
+  razorpay: <SiRazorpay className="text-blue-400 " />,
+  axios: <SiAxios className="text-blue-400 " />,
 };
 
 const Projects = () => {
@@ -119,47 +79,51 @@ const Projects = () => {
             {majorProjects.map((project, index) => (
               <div
                 key={index}
-                className={`project-card p-6 bg-gray-800 bg-opacity-40 rounded-lg shadow-md transition-transform duration-300 hover:transform hover:scale-105 hover:shadow-lg flex flex-col lg:flex-row ${
+                className={`project-card p-6 bg-gray-800 bg-opacity-40 rounded-lg shadow-md transition-transform duration-500 hover:transform hover:scale-105 hover:shadow-lg flex flex-col lg:flex-row ${
                   index % 2 === 0 ? "" : "lg:flex-row-reverse"
                 }`}
               >
-                <div className="lg:w-3/5 mb-6 lg:mb-0">
+                <div className="lg:w-3/5 mb-6 lg:mb-0 ">
                   <h3 className="text-2xl font-bold mb-2 text-white hover:text-red-400">
                     {project.title}
                   </h3>
                   <p className="text-gray-400 mb-2">{project.duration}</p>
-
                   <div
                     className={`overflow-hidden transition-all duration-1000 ease-in-out rounded-md mt-2 ${
-                      viewMoreIndex === index ? "max-h-[1000px]" : "max-h-24"
+                      viewMoreIndex === index ? "max-h-[1000px]" : "max-h-52"
                     }`}
                   >
-                    <p className="text-gray-300">
+                    <p className="text-gray-300 ">
                       {viewMoreIndex === index ||
-                      project.description.length <= 100 ? (
+                      project.description.length <= 180 ? (
                         project.description
                       ) : (
                         <>
-                          {project.description.slice(0, 100)}...
+                          {project.description.slice(0, 180)}
+                          {"... "}
                           <button
                             onClick={() => handleToggleViewMore(index)}
-                            className="text-teal-400 ml-1 underline"
+                            className="text-teal-400 underline text-opacity-80 "
                           >
                             View More
                           </button>
                         </>
                       )}
-                      {viewMoreIndex === index && (
-                        <button
-                          onClick={() => handleToggleViewMore(index)}
-                          className="text-teal-400 ml-2 underline"
-                        >
-                          Show Less
-                        </button>
-                      )}
+                      {viewMoreIndex === index &&
+                        project.description.length > 180 && (
+                          <button
+                            onClick={() => handleToggleViewMore(index)}
+                            className="text-teal-400 underline  ml-1"
+                          >
+                            Show Less
+                          </button>
+                        )}
                     </p>
                   </div>
                 </div>
+
+                {/*  */}
+
                 <div
                   className={`relative w-full lg:w-2/5 overflow-hidden rounded ${
                     index % 2 === 0 ? "lg:ml-4" : "lg:mr-4"
@@ -171,7 +135,7 @@ const Projects = () => {
                     className="w-full h-60 object-contain transition duration-300 ease-in-out hover:opacity-75"
                   />
                   <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center text-white bg-gray-900 bg-opacity-75 opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100 p-4">
-                    <h4 className="text-xl lg:text-2xl font-bold mb-4 text-center">
+                    <h4 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 text-center hover:text-red-600">
                       {project.title}
                     </h4>
                     <div className="flex flex-row sm:flex-row justify-center gap-4 my-4">
@@ -181,7 +145,7 @@ const Projects = () => {
                         rel="noreferrer"
                         className="hover:text-sky-400"
                       >
-                        <FaEye size={24} />
+                        <FaEye className="w-6 h-6 sm:w-7 sm:h-7" />
                       </a>
                       <a
                         href={project.gitHubLink}
@@ -189,17 +153,21 @@ const Projects = () => {
                         rel="noreferrer"
                         className="hover:text-green-400"
                       >
-                        <FaGithub size={24} />
+                        <FaGithub className="w-6 h-6 sm:w-7 sm:h-7" />
                       </a>
                     </div>
-                    <div className="flex flex-wrap justify-center gap-2 mt-4 max-h-24 overflow-auto tech-stack-scroll">
+                    <div className="flex flex-wrap justify-center gap-2 mt-4 max-h-24 overflow-visible tech-stack-scroll">
                       {project.techStackUsed &&
                         project.techStackUsed.map((tech) => (
                           <div
                             key={tech}
                             className="flex items-center group relative p-1"
                           >
-                            {techIcons[tech] && techIcons[tech]}
+                            {techIcons[tech] && (
+                              <div className="w-4 h-4 sm:w-2 sm:h-2">
+                                {techIcons[tech]}
+                              </div>
+                            )}
                             <span className="absolute bottom-full mb-1 hidden group-hover:block text-xs bg-black text-white py-1 px-2 rounded">
                               {tech}
                             </span>
@@ -252,7 +220,7 @@ const Projects = () => {
                       <FaGithub size={24} />
                     </a>
                   </div>
-                  <div className="flex flex-wrap justify-center gap-2 mt-4 max-h-24 overflow-auto tech-stack-scroll">
+                  <div className="flex flex-wrap justify-center gap-2 mt-4 max-h-24 overflow-visible tech-stack-scroll">
                     {project.techStackUsed &&
                       project.techStackUsed.map((tech) => (
                         <div
