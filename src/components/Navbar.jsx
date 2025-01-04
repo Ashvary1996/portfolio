@@ -7,11 +7,14 @@ const Navbar = () => {
   const [rColor, setRcolor] = useState(getRandomColor());
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   function getRandomColor() {
-    const letters = "0123456789ABCDEF";
+    // const letters = "0123456789ABCDEF";
+    const letters = "789ABCDEF"; // Higher values for brighter colors
     let color = "#";
     for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
+      const randomIndex = Math.floor(Math.random() * letters.length);
+      color += letters[randomIndex];
     }
     return color;
   }
@@ -20,7 +23,7 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full bg-gray-800 text-white shadow-md z-10 opacity-90">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         <p
-          className="text-xl font-bold cursor-pointer"
+          className="text-xl font-bold cursor-pointer select-none"
           style={{ color: rColor, fontFamily: "Poppins, sans-serif" }}
           onClick={() => setRcolor(getRandomColor())}
         >

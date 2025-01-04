@@ -96,11 +96,19 @@ const Projects = () => {
                     <p className="text-gray-300 ">
                       {viewMoreIndex === index ||
                       project.description.length <= 180 ? (
-                        project.description
+                        <span
+                          dangerouslySetInnerHTML={{
+                            __html: project.description,
+                          }}
+                        />
                       ) : (
                         <>
-                          {project.description.slice(0, 180)}
-                          {"... "}
+                          <span
+                            dangerouslySetInnerHTML={{
+                              __html: project.description.slice(0, 180) + "...",
+                            }}
+                          />
+
                           <button
                             onClick={() => handleToggleViewMore(index)}
                             className="text-teal-400 underline text-opacity-80 "
