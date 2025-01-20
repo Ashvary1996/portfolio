@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { FaBars, FaTimes } from "react-icons/fa";
-const resumeUrl = require("../data/resume.pdf");
-
+const resumeUrl = require("../data/Ashvary_Gidian_Resume.pdf");
+ 
 const Navbar = () => {
   const [rColor, setRcolor] = useState(getRandomColor());
 
