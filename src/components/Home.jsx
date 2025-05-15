@@ -15,6 +15,15 @@ import {
   SiRender,
   SiPostman,
   SiExpress,
+  SiRedux,
+  SiTypescript,
+  SiNextdotjs,
+  SiSocketdotio,
+  SiGoogle,
+  SiRedis,
+  SiBabel,
+  SiJsonwebtokens,
+  SiVultr,
 } from "react-icons/si";
 import restApiIcon from "../data/thumbnail/restApi.png";
 
@@ -51,7 +60,10 @@ const Home = () => {
         <div className="relative text-center max-w-4xl mx-auto p-6 bg-gray-800 bg-opacity-60 shadow-lg rounded-lg transform transition duration-1000 hover:scale-105">
           <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-200">
             Hi, I'm{" "}
-            <span className="font-serif text-4xl md:text-5xl">Ashvary Gidian</span>,
+            <span className="font-serif text-4xl md:text-5xl">
+              Ashvary Gidian
+            </span>
+            ,
             <br />
             <span
               className={`transition-colors duration-500 text-2xl ${roles[currentRole].color}`}
@@ -96,11 +108,15 @@ const Home = () => {
         }}
       >
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-semibold text-gray-200">My Skills</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-200">
+            My Skills
+          </h2>
         </div>
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-6">
           <div className="skill-item bg-gray-700 bg-opacity-20 p-6 rounded-lg shadow-lg hover:bg-gray-800 transition duration-300 transform hover:scale-105">
-            <h3 className="font-bold text-xl md:text-2xl mb-4 text-gray-200">Frontend</h3>
+            <h3 className="font-bold text-xl md:text-2xl mb-4 text-gray-200">
+              Frontend
+            </h3>
             <ul className="skills-list space-y-4 text-gray-300  ">
               <li className="flex items-center text-sm md:text-base">
                 <FaHtml5 className="mr-2 text-orange-400 hover:scale-125 transition-transform" />
@@ -122,11 +138,25 @@ const Home = () => {
                 <SiTailwindcss className="mr-2 text-teal-400 hover:scale-125 transition-transform" />
                 Tailwind CSS
               </li>
+              <li className="flex items-center text-sm md:text-base">
+                <SiRedux className="mr-2 text-purple-500 hover:scale-125 transition-transform" />
+                Redux (Redux Toolkit)
+              </li>
+              <li className="flex items-center text-sm md:text-base">
+                <SiTypescript className="mr-2 text-blue-600 hover:scale-125 transition-transform" />
+                TypeScript (Basic)
+              </li>
+              <li className="flex items-center text-sm md:text-base">
+                <SiNextdotjs className="mr-2 text-gray-300 hover:scale-125 transition-transform" />
+                Next.js (Basic)
+              </li>
             </ul>
           </div>
 
           <div className="skill-item bg-gray-700 bg-opacity-20 p-6 rounded-lg shadow-lg hover:bg-gray-800 transition duration-300 transform hover:scale-105">
-            <h3 className="font-bold text-xl md:text-2xl mb-4 text-gray-200">Backend</h3>
+            <h3 className="font-bold text-xl md:text-2xl mb-4 text-gray-200">
+              Backend
+            </h3>
             <ul className="skills-list space-y-4 text-gray-300">
               <li className="flex items-center text-sm md:text-base">
                 <FaNodeJs className="mr-2 text-green-400 hover:scale-125 transition-transform" />
@@ -148,11 +178,33 @@ const Home = () => {
                 />
                 RESTful API
               </li>
+              <li className="flex items-center text-sm md:text-base">
+                <SiJsonwebtokens className="mr-2 text-red-500 hover:scale-125 transition-transform" />
+                JWT
+              </li>
+              <li className="flex items-center text-sm md:text-base">
+                <SiBabel className="mr-2 text-yellow-600 hover:scale-125 transition-transform" />
+                Bcrypt
+              </li>
+              <li className="flex items-center text-sm md:text-base">
+                <SiRedis className="mr-2 text-red-600 hover:scale-125 transition-transform" />
+                Redis
+              </li>
+              <li className="flex items-center text-sm md:text-base">
+                <SiGoogle className="mr-2 text-blue-500 hover:scale-125 transition-transform" />
+                Google APIs and Services
+              </li>
+              <li className="flex items-center text-sm md:text-base">
+                <SiSocketdotio className="mr-2 text-gray-400 hover:scale-125 transition-transform" />
+                SSE (Server-Sent Events)
+              </li>
             </ul>
           </div>
 
           <div className="skill-item bg-gray-700 bg-opacity-20 p-6 rounded-lg shadow-lg hover:bg-gray-800 transition duration-300 transform hover:scale-105">
-            <h3 className="font-bold text-xl md:text-2xl mb-4 text-gray-200">Tools & Platforms</h3>
+            <h3 className="font-bold text-xl md:text-2xl mb-4 text-gray-200">
+              Tools & Platforms
+            </h3>
             <ul className="skills-list space-y-4 text-gray-300">
               <li className="flex items-center text-sm md:text-base">
                 <FaGit className="mr-2 text-red-400 hover:scale-125 transition-transform" />
@@ -173,6 +225,10 @@ const Home = () => {
               <li className="flex items-center text-sm md:text-base">
                 <FaCloud className="mr-2 text-blue-400 hover:scale-125 transition-transform" />
                 MongoDB Atlas
+              </li>
+              <li className="flex items-center text-sm md:text-base">
+                <SiVultr className="mr-2 text-blue-600 hover:scale-125 transition-transform" />
+                VPS (Hostinger)
               </li>
             </ul>
           </div>

@@ -6,6 +6,41 @@ import todoImg from "../data/thumbnail/todoImg.png";
 import movieImg from "../data/thumbnail/movieImg.png";
 import weatherImg from "../data/thumbnail/weatherImg.png";
 export const majorProjects = [
+   {
+    title: "E-Com-App",
+    duration: "26 Feb - 28 May 2024",
+    image: ecomHome,
+    liveLink: "https://ecom-app-by-ashvary.netlify.app/",
+    gitHubLink: "https://github.com/Ashvary1996/e-com-app",
+    techStackUsed: [
+      "html",
+      "css",
+      "js",
+      "react",
+      "mongodb",
+      "tailwind",
+      "node",
+      "express",
+      "restfulApi",
+      "gitHub",
+      "netlify",
+      "render",
+      "postman",
+      "mongoDbAtlas",
+      "razorpay",
+    ],
+    description: `
+    <p>The project addressed the demand for a user-friendly e-commerce application by streamlining the browsing, purchasing, and management of products to enhance the shopping experience. Developed using <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>React</strong>, <strong>Tailwind CSS</strong>, <strong>Redux Toolkit</strong>, <strong>NodeMailer</strong>, <strong>React-Router</strong>, <strong>Formik</strong>, and <strong>Yup</strong>, the platform offers a comprehensive solution for customers. It features easy navigation, secure transactions, and efficient product management.</p>
+
+    <p>The platform includes advanced functionalities such as product search, cart management, order placement, and a seamless checkout process to ensure user satisfaction. Additionally, a responsive user interface was crafted to ensure optimal performance and visual appeal across various devices, prioritizing accessibility and ease of use for all customers. The application was designed to handle both the customer and admin sides of the platform efficiently.</p>
+
+    <p>On the frontend, the application is powered by <strong>React</strong>, providing a dynamic, responsive interface, while <strong>Tailwind CSS</strong> is used for sleek and responsive styling. For state management, <strong>Redux Toolkit</strong> ensures smooth and efficient navigation across the app. On the backend, secure transactions are facilitated through the integration of <strong>NodeMailer</strong>, while user authentication is handled using <strong>JWT (JSON Web Tokens)</strong>. Additionally, <strong>Razorpay</strong> has been integrated as the payment gateway for secure, seamless transactions.</p>
+
+    <p>The platform also offers essential user management features, including <strong>user registration</strong>, <strong>login</strong>, and <strong>password reset</strong> functionalities. Users can easily register an account, log in securely, and reset their passwords whenever needed, ensuring a smooth user experience throughout the platform.</p>
+
+    <p>In the administrative dashboard, the platform provides admins with the ability to manage products, monitor orders, and moderate user reviews. Admins can easily add new products, update existing listings, and keep track of customer feedback. With this robust feature set, the application aims to deliver a comprehensive, secure, and user-friendly e-commerce experience.</p>
+  `,
+  },
   {
     title: "Red Bus",
     duration: "23 March - 26 April 2024",
@@ -67,41 +102,7 @@ export const majorProjects = [
     <p>To further enhance project efficiency, <strong>Agile methodology</strong> was employed, with <strong>React</strong>, <strong>React-Redux</strong>, and <strong>localStorage</strong> used for data management, <strong>React Router</strong> for routing, and <strong>Tailwind CSS</strong> for responsive component development. Input validation with <strong>Formik.js</strong> helped streamline user interactions, ensuring a smooth and reliable user experience.</p>
   `,
   },
-  {
-    title: "E-Com-App",
-    duration: "26 Feb - 28 May 2024",
-    image: ecomHome,
-    liveLink: "https://ecom-app-by-ashvary.netlify.app/",
-    gitHubLink: "https://github.com/Ashvary1996/e-com-app",
-    techStackUsed: [
-      "html",
-      "css",
-      "js",
-      "react",
-      "mongodb",
-      "tailwind",
-      "node",
-      "express",
-      "restfulApi",
-      "gitHub",
-      "netlify",
-      "render",
-      "postman",
-      "mongoDbAtlas",
-      "razorpay",
-    ],
-    description: `
-    <p>The project addressed the demand for a user-friendly e-commerce application by streamlining the browsing, purchasing, and management of products to enhance the shopping experience. Developed using <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>React</strong>, <strong>Tailwind CSS</strong>, <strong>Redux Toolkit</strong>, <strong>NodeMailer</strong>, <strong>React-Router</strong>, <strong>Formik</strong>, and <strong>Yup</strong>, the platform offers a comprehensive solution for customers. It features easy navigation, secure transactions, and efficient product management.</p>
-
-    <p>The platform includes advanced functionalities such as product search, cart management, order placement, and a seamless checkout process to ensure user satisfaction. Additionally, a responsive user interface was crafted to ensure optimal performance and visual appeal across various devices, prioritizing accessibility and ease of use for all customers. The application was designed to handle both the customer and admin sides of the platform efficiently.</p>
-
-    <p>On the frontend, the application is powered by <strong>React</strong>, providing a dynamic, responsive interface, while <strong>Tailwind CSS</strong> is used for sleek and responsive styling. For state management, <strong>Redux Toolkit</strong> ensures smooth and efficient navigation across the app. On the backend, secure transactions are facilitated through the integration of <strong>NodeMailer</strong>, while user authentication is handled using <strong>JWT (JSON Web Tokens)</strong>. Additionally, <strong>Razorpay</strong> has been integrated as the payment gateway for secure, seamless transactions.</p>
-
-    <p>The platform also offers essential user management features, including <strong>user registration</strong>, <strong>login</strong>, and <strong>password reset</strong> functionalities. Users can easily register an account, log in securely, and reset their passwords whenever needed, ensuring a smooth user experience throughout the platform.</p>
-
-    <p>In the administrative dashboard, the platform provides admins with the ability to manage products, monitor orders, and moderate user reviews. Admins can easily add new products, update existing listings, and keep track of customer feedback. With this robust feature set, the application aims to deliver a comprehensive, secure, and user-friendly e-commerce experience.</p>
-  `,
-  },
+ 
   {
     title: "BookmyShow",
     duration: "26 Feb - 28 May 2024",

@@ -5,7 +5,6 @@ const resumeUrl = require("../data/Ashvary_Gidian_Resume.pdf");
  
 const Navbar = () => {
   const [rColor, setRcolor] = useState(getRandomColor());
-
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   function getRandomColor() {
