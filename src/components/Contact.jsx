@@ -124,7 +124,7 @@ const Contact = () => {
             <div className="md:w-2/3 bg-gray-700 bg-opacity-30 p-8 rounded-lg shadow-lg hover:bg-gray-700 hover:bg-opacity-60 transition duration-600">
               <form onSubmit={handleSubmit} className="space-y-6 text-black">
                 <div>
-                  <label className="block mb-2 text-gray-300">Name</label>
+                  <label className="block mb-2 text-gray-300">Your Full Name</label>
                   <input
                     type="text"
                     name="name"
@@ -132,10 +132,11 @@ const Contact = () => {
                     onChange={handleChange}
                     className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-300"
                     required
+                    placeholder="Let me know who's talking..."
                   />
                 </div>
                 <div>
-                  <label className="block mb-2 text-gray-300">Email</label>
+                  <label className="block mb-2 text-gray-300">Your Contact Email</label>
                   <input
                     type="email"
                     name="email"
@@ -143,10 +144,11 @@ const Contact = () => {
                     onChange={handleChange}
                     className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-300"
                     required
+                    placeholder="Where can I reach you?"
                   />
                 </div>
                 <div>
-                  <label className="block mb-2 text-gray-300">Subject</label>
+                  <label className="block mb-2 text-gray-300">Subject (what's on your mind?)</label>
                   <input
                     type="text"
                     name="subject"
@@ -154,24 +156,26 @@ const Contact = () => {
                     onChange={handleChange}
                     className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-300"
                     required
+                    placeholder="What's this about?"
                   />
                 </div>
                 <div>
-                  <label className="block mb-2 text-gray-300">Message</label>
+                  <label className="block mb-2 text-gray-300">Your Message</label>
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-300"
                     required
+                    placeholder="Share the details here..."
                   ></textarea>
                 </div>
                 <div className="text-center">
                   <button
                     type="submit"
-                    className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300"
+                    className="bg-teal-400 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300"
                   >
-                    Send Message
+                    Send Mail
                   </button>
                 </div>
               </form>
